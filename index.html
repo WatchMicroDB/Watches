@@ -53,567 +53,3364 @@
   </footer>
 
   <script>
- const DATA = [
-  { Continent: "Asia", Country: "China", Brand: "Aragon Watch Co", Website: "https://www.aragonwatch.com/" },
-  { Continent: "Asia", Country: "China", Brand: "Atelier Wen", Website: "https://us.atelierwen.com/" },
-  { Continent: "Asia", Country: "China", Brand: "Baltany Watches", Website: "https://www.baltany.com/" },
-  { Continent: "Asia", Country: "China", Brand: "Signum Watches", Website: "https://www.signumwatches.com/" },
-  { Continent: "Asia", Country: "China", Brand: "Straton Watch Company", Website: "https://www.stratonwc.com/" },
-  { Continent: "Asia", Country: "China", Brand: "Sugess Watches", Website: "https://www.sugessofficial.com/" },
-  { Continent: "Asia", Country: "China", Brand: "Yeland Watch", Website: "https://grmontrewatches.com/collections/yelang" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "Aision Watch Co", Website: "https://aisiondesign.com/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "Andersmann Watch Co", Website: "https://www.andersmann.com/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "Angles Watches", Website: "https://angleswatches.com/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "AVI-8 Watches", Website: "https://avi-8.com/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "Belhamel Watches", Website: "https://www.belhamel.com/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "Boldr Supply Co", Website: "https://www.boldrsupply.co/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "Crafter Blue", Website: "https://www.crafterblue.com/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "MT&W Watches", Website: "https://mtw.watch/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "OVD Watches", Website: "https://www.ovd.com.hk/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "Phoibos Watches", Website: "https://phoiboswatch.com/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "RZE Watches", Website: "https://www.rzewatches.com/" },
-  { Continent: "Asia", Country: "India", Brand: "Ajwain Watches", Website: "https://ajwa.in/" },
-  { Continent: "Asia", Country: "India", Brand: "Bangalore Watch Company", Website: "https://www.bangalorewatchco.in/" },
-  { Continent: "Asia", Country: "India", Brand: "Jaipur Watches", Website: "https://jaipur.watch/" },
-  { Continent: "Asia", Country: "India", Brand: "Horpa Watches", Website: "https://horpawatch.com/" },
-  { Continent: "Asia", Country: "Japan", Brand: "Aevum Timepieces", Website: "https://www.aevumtime.com/" },
-  { Continent: "Asia", Country: "Japan", Brand: "Kikuchi Nakagawa", Website: "https://kikuchi-nakagawa.com/en/" },
-  { Continent: "Asia", Country: "Japan", Brand: "Kuoe  Kyoto", Website: "https://www.kuoe-en.com/" },
-  { Continent: "Asia", Country: "Japan", Brand: "Kurono Tokyo", Website: "https://kuronotokyo.com/" },
-  { Continent: "Asia", Country: "Japan", Brand: "Namica Watches", Website: "https://www.namicawatches.com/" },
-  { Continent: "Asia", Country: "Japan", Brand: "Naoua Hida & Co.", Website: "https://naoyahidawatch.com/" },
-  { Continent: "Asia", Country: "Japan", Brand: "Otsuka Lotec.", Website: "https://otsuka-lotec.com/" },
-  { Continent: "Asia", Country: "Japan", Brand: "Wancher Watch", Website: "https://wancherwatch.com/" },
-  { Continent: "Asia", Country: "Malaysia", Brand: "Alcadus Watches", Website: "https://alcadus.com/" },
-  { Continent: "Asia", Country: "Malaysia", Brand: "Aerotec Watches", Website: "https://aerotecwatches.com/" },
-  { Continent: "Asia", Country: "Malaysia", Brand: "Revelot Watches", Website: "https://www.revelot.com/" },
-  { Continent: "Asia", Country: "Philippines", Brand: "Argos Watch Corporation", Website: "https://argos-watches.com/" },
-  { Continent: "Asia", Country: "Philippines", Brand: "Makina Watches", Website: "https://www.makinawatches.com/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "Audric Watches", Website: "https://audricwatches.com/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "MMI Watches", Website: "https://www.mmiwatches.com/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "Vario Watches", Website: "https://vario.sg/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "Vesuviate Watches", Website: "https://vesuviate.com/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "Vostra Designs", Website: "https://vostradesigns.com/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "Zelos Watches", Website: "https://zeloswatches.com/" },
-  { Continent: "Asia", Country: "South Korea", Brand: "Pitzmann Watches", Website: "https://www.pitzmann.com/" },
-  { Continent: "Asia", Country: "Taiwan", Brand: "Valimor Watches", Website: "https://www.valimor.com/" },
-  { Continent: "Asia", Country: "Thailand", Brand: "Wise Watches", Website: "https://wisetimepiece.com/" },
-  { Continent: "Europe", Country: "Austria", Brand: "Habring2 Watches", Website: "https://www.habring2.com/" },
-  { Continent: "Europe", Country: "Belgium", Brand: "Gavox Watches", Website: "https://gavox.com/" },
-  { Continent: "Europe", Country: "Belgium", Brand: "Ikigai Watches", Website: "https://ikigaiwatches.com/" },
-  { Continent: "Europe", Country: "Denmark", Brand: "Henry Archer", Website: "https://henryarcher.com/en-us" },
-  { Continent: "Europe", Country: "Finland", Brand: "AndoAndoAndo", Website: "https://andoandoando.com/" },
-  { Continent: "Europe", Country: "Finland", Brand: "Gronefeld", Website: "https://www.gronefeld.com/" },
-  { Continent: "Europe", Country: "Finland", Brand: "Pook Watches", Website: "https://official.pookwatches.com/en/" },
-  { Continent: "Europe", Country: "Finland", Brand: "Studio Sarpaneva", Website: "https://studiosarpaneva.com/" },
-  { Continent: "Europe", Country: "Finland", Brand: "Voutilinen", Website: "https://www.voutilainen.ch/" },
-  { Continent: "Europe", Country: "France", Brand: "Baltic Watches", Website: "https://baltic-watches.com/en" },
-  { Continent: "Europe", Country: "France", Brand: "Beaubleu Watches", Website: "https://beaubleu-paris.com/en" },
-  { Continent: "Europe", Country: "France", Brand: "Corniche", Website: "https://cornichewatches.com/" },
-  { Continent: "Europe", Country: "France", Brand: "Depancel Watches", Website: "https://depancel.com/en-eu" },
-  { Continent: "Europe", Country: "France", Brand: "Meridiano Watches", Website: "https://www.meridiano.fr/" },
-  { Continent: "Europe", Country: "France", Brand: "Charlie Paris Watches", Website: "https://charlie-paris.com/en" },
-  { Continent: "Europe", Country: "France", Brand: "Eska Watches", Website: "https://eska-watches.fr/en" },
-  { Continent: "Europe", Country: "France", Brand: "HGP Dive Watches", Website: "https://www.hgp-watches.com/" },
-  { Continent: "Europe", Country: "France", Brand: "Horoloscaphe Watches", Website: "https://www.horloscaphe-watches-paris.com/" },
-  { Continent: "Europe", Country: "France", Brand: "Le Forban Securitare Mer", Website: "https://leforbansecuritemer.com/en/" },
-  { Continent: "Europe", Country: "France", Brand: "Serica Watches", Website: "https://serica-watches.com/en" },
-  { Continent: "Europe", Country: "France", Brand: "Wolbrook Watches", Website: "https://wolbrook.com/" },
-  { Continent: "Europe", Country: "France", Brand: "Yema Watches", Website: "https://yema.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Armin Strom", Website: "https://www.arminstrom.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Archimede Watches", Website: "https://www.archimede-watches.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Alexander Shorokhoff", Website: "https://alexander-shorokhoff.com/en/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Autran & Viala", Website: "https://www.autran-viala.com/en/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Damasko Watches", Website: "https://www.damaskowatchtechnology.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Defakto Watches", Website: "https://deklawatches.com/en" },
-  { Continent: "Europe", Country: "Germany", Brand: "Dekla Watches", Website: "https://www.defakto-watches.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Glashutte Watches", Website: "https://www.glashuette-original.com/en/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Hanhart Chronographs", Website: "https://www.hanhart.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Hentschel Hamburg Watches", Website: "https://hentschel-hamburg.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Laco", Website: "https://www.laco.de/en/index" },
-  { Continent: "Europe", Country: "Germany", Brand: "Lang & Heyne", Website: "https://www.lang-und-heyne.de/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Limes Watches", Website: "https://www.limes-watches.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Muhle Glashutte Watches", Website: "https://www.muehle-glashuette.de/en/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Sherpa Watches", Website: "https://sherpawatches.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Nomos Watches", Website: "https://nomos-glashuette.com/en/?showDismissibleStoreSelector=1" },
-  { Continent: "Europe", Country: "Germany", Brand: "Sinn Watches", Website: "https://www.sinn.de/en/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Steinhart Watches", Website: "https://www.steinhartwatches.de/en/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Sternglas Watches", Website: "https://www.sternglas.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Stowa Watches", Website: "https://www.stowa.de/?lang=eng" },
-  { Continent: "Europe", Country: "Iceland", Brand: "JS Watch Co", Website: "https://www.jswatch.com/" },
-  { Continent: "Europe", Country: "Ireland", Brand: "McGonigle Watches", Website: "https://www.mcgonigle.ch/" },
-  { Continent: "Europe", Country: "Ireland", Brand: "MD Watches Studio", Website: "https://www.martindesignwatches.com/" },
-  { Continent: "Europe", Country: "Italy", Brand: "Aenigma Watches", Website: "https://www.aenigma.world/" },
-  { Continent: "Europe", Country: "Italy", Brand: "Astrabyss Watches", Website: "https://www.astrabyss.it/" },
-  { Continent: "Europe", Country: "Italy", Brand: "Echo/Neutra Watches", Website: "https://echoneutra.com/" },
-  { Continent: "Europe", Country: "Italy", Brand: "Lamberti Orologiai", Website: "https://lamberti-orologiai.com/en" },
-  { Continent: "Europe", Country: "Italy", Brand: "Out of Order Watches", Website: "https://outoforderwatches.com/" },
-  { Continent: "Europe", Country: "Italy", Brand: "Unimatic Watches", Website: "https://www.unimaticwatches.com/" },
-  { Continent: "Europe", Country: "Italy", Brand: "Venezianico Watches", Website: "https://us.venezianico.com/" },
-  { Continent: "Europe", Country: "Netherlands", Brand: "Aevig Watches", Website: "https://aevig.com/" },
-  { Continent: "Europe", Country: "Netherlands", Brand: "TWCO Technical Watches", Website: "https://www.twcowatches.com/" },
-  { Continent: "Europe", Country: "Netherlands", Brand: "Holthinrichs Watches", Website: "https://holthinrichswatches.com/" },
-  { Continent: "Europe", Country: "Netherlands", Brand: "Maen Watches", Website: "https://www.maenwatches.com/" },
-  { Continent: "Europe", Country: "Norway", Brand: "Aigi Watches", Website: "https://aigitime.com/" },
-  { Continent: "Europe", Country: "Norway", Brand: "Certina Watches", Website: "https://www.certina.com/en" },
-  { Continent: "Europe", Country: "Norway", Brand: "DeSanders Horologie", Website: "https://desanders.no/" },
-  { Continent: "Europe", Country: "Norway", Brand: "Radium Instruments", Website: "https://radiuminstruments.no/" },
-  { Continent: "Europe", Country: "Norway", Brand: "Straum Watches", Website: "https://straum.co/" },
-  { Continent: "Europe", Country: "Poland", Brand: "Arach Watches", Website: "https://www.arachwatches.com/en-us" },
-  { Continent: "Europe", Country: "Poland", Brand: "Balticus Watches", Website: "https://balticus-watches.com/en/" },
-  { Continent: "Europe", Country: "Poland", Brand: "Blonie Watches", Website: "https://zegarkiblonie.com/" },
-  { Continent: "Europe", Country: "Poland", Brand: "G.Gerlach Watches", Website: "https://www.gerlach.org.pl/en/g-gerlach/" },
-  { Continent: "Europe", Country: "Poland", Brand: "Kollokium Watch Projects", Website: "https://kollokium.com/" },
-  { Continent: "Europe", Country: "Poland", Brand: "Mudita Watches", Website: "https://mudita.com/products/watches/" },
-  { Continent: "Europe", Country: "Poland", Brand: "Ovsky Watches", Website: "https://www.ovsky.pl/en" },
-  { Continent: "Europe", Country: "Poland", Brand: "Porpora Watches", Website: "https://www.polpora.com/manufaktura/en/home/" },
-  { Continent: "Europe", Country: "Poland", Brand: "Radia", Website: "https://radiawatches.com/" },
-  { Continent: "Europe", Country: "Poland", Brand: "Vratislavia Conceptum Watches", Website: "https://vratislavia-watches.com/" },
-  { Continent: "Europe", Country: "Poland", Brand: "Xicorr Watches", Website: "https://shop.xicorr.com/lang/en" },
-  { Continent: "Europe", Country: "Portugal", Brand: "Borealis Watch Co", Website: "https://www.borealiswatch.com/" },
-  { Continent: "Europe", Country: "Portugal", Brand: "Earhart Watches", Website: "https://earhartwatches.com/" },
-  { Continent: "Europe", Country: "Portugal", Brand: "Escudo Watches", Website: "https://escudo-watches.com/" },
-  { Continent: "Europe", Country: "Portugal", Brand: "Meialua Watches", Website: "https://www.meialuawatches.com/" },
-  { Continent: "Europe", Country: "Portugal", Brand: "Prometheus Watch Company", Website: "https://www.prometheuswatchcompany.com/" },
-  { Continent: "Europe", Country: "Romania", Brand: "Albert Villa Timepieces", Website: "https://albertvillatimepieces.com/" },
-  { Continent: "Europe", Country: "Spain", Brand: "Ophion Watches", Website: "https://www.ophion-watches.com/" },
-  { Continent: "Europe", Country: "Spain", Brand: "Minor Watches", Website: "https://minorwatches.com/en/?v=25400724d737" },
-  { Continent: "Europe", Country: "Spain", Brand: "Crepas Watches", Website: "https://www.crepaswatches.com/en/" },
-  { Continent: "Europe", Country: "Spain", Brand: "Tempore Lux Watches", Website: "https://temporelux.com/en/" },
-  { Continent: "Europe", Country: "Spain", Brand: "Atelier de Chronometrie", Website: "https://www.atelierdechronometrie.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Alato Watches", Website: "https://www.alato.se/en" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Alf Watch Company", Website: "https://alfwatchcompany.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Bravur Watches", Website: "https://bravurwatches.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "GoS Watches", Website: "https://www.goswatches.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Epoch Stockholm", Website: "https://www.epoch.se/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Halda Watch Company", Website: "https://www.haldawatches.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Kronaby Hybrid Watches", Website: "https://kronaby.com/en-GB/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Malm Watches", Website: "https://eu.malmwatches.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Mean Watches", Website: "https://www.maenwatches.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Monchard Watches", Website: "https://www.monchardwatches.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Sjoo Sandstrom", Website: "https://www.sjoosandstrom.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Tuseno Watches", Website: "https://tuseno.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Aera Instruments", Website: "https://aera.co/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Airain Watches", Website: "https://www.airain.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Armand Nicolet", Website: "https://www.armandnicolet.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Awake Watches", Website: "https://awakewatches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Benrus Watches", Website: "https://benrus.com/en-ch/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Bourlinger Watches", Website: "https://www.bourlinger.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Cuervo Y Sobrinos Watches", Website: "https://www.cuervoysobrinos.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Direnzo Watches", Website: "https://direnzowatches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Elka Watch Co", Website: "https://www.elkawatch.ch/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Formex Watches", Website: "https://formexwatch.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Gorilla Watches", Website: "https://gorilla-watches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Jacques Do Manoir Watches", Website: "https://www.jacquesdumanoir.ch/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Laventure Watches", Website: "https://laventurewatches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Liv Watches", Website: "https://www.livwatches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "MB&F", Website: "https://www.mbandf.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Milus Watch Co", Website: "https://milus.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Ming Watches", Website: "https://www.ming.watch/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Nivada Grenchen", Website: "https://nivadagrenchenofficial.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Norqain Watches", Website: "https://norqain.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Olech & Wajs Watches", Website: "https://ow-watch.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Parmigiani Fleuirier Watches", Website: "https://www.parmigiani.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Pilo & Co", Website: "https://pilo-watches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Signum Watches", Website: "https://www.signumwatches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Snglrty Watch", Website: "https://www.snglrtywatch.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Squale Watches", Website: "https://www.squale.ch/en/home" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Swiss Watch Company", Website: "https://swcusa.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Vulcain Watches", Website: "https://vulcain.ch/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Wicked Watch Co", Website: "https://www.wickedwatch.ch/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Zodiac Watches", Website: "https://www.zodiacwatches.com/en-us/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Furlan Marri Watches", Website: "https://furlanmarri.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "96Zero Watches", Website: "https://96zero.co.uk/" },
-  { Continent: "Europe", Country: "UK", Brand: "Alpharo Watches", Website: "https://alpharo.co.uk/" },
-  { Continent: "Europe", Country: "UK", Brand: "Alkin Watches", Website: "https://alkinwatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "anOrdain Watches", Website: "https://anordain.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Apiar Watches", Website: "https://www.apiar.co.uk/" },
-  { Continent: "Europe", Country: "UK", Brand: "Arken Watch Co", Website: "https://arken.uk/" },
-  { Continent: "Europe", Country: "UK", Brand: "Beaucroft Watches", Website: "https://beaucroftwatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Bremont Watch Co", Website: "https://www.bremont.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Christopher Ward", Website: "https://www.christopherward.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Clemence Watches", Website: "https://www.clemencewatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Detrash Watches", Website: "https://detrash.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Ember Watch Co", Website: "https://www.emberwatchcompany.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Emerson Scott Watches", Website: "https://www.emertonscott.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Farer Watches", Website: "https://farer.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Fears Watch Company", Website: "https://www.fearswatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Golby Watches", Website: "https://www.golbywatches.co.uk/" },
-  { Continent: "Europe", Country: "UK", Brand: "Marloe Watch Co", Website: "https://www.marloewatchcompany.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Maystone Watch Co", Website: "https://www.maystonewatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Mc Quaide Watches", Website: "https://mcquaide.co.uk/" },
-  { Continent: "Europe", Country: "UK", Brand: "Monro Adventure Watches", Website: "https://monroadventure.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Mr Jones Watches", Website: "https://mrjoneswatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Newmark Watch Co", Website: "https://newmarkwatchcompany.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Nite Watches", Website: "https://www.nitewatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Ontic Watches", Website: "https://onticwatches.com/password" },
-  { Continent: "Europe", Country: "UK", Brand: "Riley Watch Co", Website: "https://www.rileywatchco.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Satori Watches", Website: "https://www.satoriwatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Studio Underd0g", Website: "https://underd0g.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Swan and Edgar Watches", Website: "https://swanandedgar.com/en-ie" },
-  { Continent: "North America", Country: "Canada", Brand: "Branch Horology", Website: "https://branchhorology.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Bahrami Watches", Website: "https://bahramiwatches.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Fleux Watches", Website: "https://www.fleuxwatches.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Halios Watches", Website: "https://halioswatches.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Heron Watch Co", Website: "https://www.heronwatches.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Makoto Watches", Website: "https://makotowatch.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Marathon Watches", Website: "https://www.marathonwatch.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Momemtum Watches", Website: "https://momentumwatch.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Redwood Watches", Website: "https://www.redwoodwatches.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Slow Watches", Website: "https://uk.slow-watches.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Whitby Watch Co.", Website: "https://whitbywatchco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "5280 Watch Company", Website: "https://www.5280watchcompany.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Albany Watches", Website: "https://albanywatches.com/blog/" },
-  { Continent: "North America", Country: "USA", Brand: "Alexander James Watches", Website: "https://alexanderjameswatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Ardio Watches", Website: "https://ardiowatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Arethusa Watch Co", Website: "https://www.arethusawatch.com/about" },
-  { Continent: "North America", Country: "USA", Brand: "Astor+Banks Watches", Website: "https://astorandbanks.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Autodromo", Website: "https://autodromo.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Averitas", Website: "https://averitas.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Avian Watches", Website: "https://avianwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "BYOP Watches", Website: "https://www.byopwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Canopy Watch Company", Website: "https://www.canopywatchco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Centric Instruments", Website: "https://www.centricinstruments.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Colorado Wath Company", Website: "https://coloradowatchcompany.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Detroit Watch Co", Website: "https://detroitwatchco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Dryden Watch Company", Website: "https://drydenwatchco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Dufrane Watches", Website: "https://www.dufranewatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Eone Watches", Website: "https://www.eone-time.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Farr + Switt Watches", Website: "https://www.farrandswit.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Filip and Co Watches", Website: "https://www.filipandcowatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Ginault Watches", Website: "https://ginault.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Cincinnati Watch Company", Website: "https://cincinnatiwatch.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Grandeur Watches", Website: "https://grandeur-usa.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Haim Watch Company", Website: "https://haimwatchco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Heitis Watch Company", Website: "https://heitiswatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Hemel Watches", Website: "https://www.hemelwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Hoffman Watches", Website: "https://hoffmanwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Iconic Watch Company", Website: "https://iconicwatchco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Islander Dive Watches", Website: "https://longislandwatch.com/islander-watches/" },
-  { Continent: "North America", Country: "USA", Brand: "Jack Mason Watches", Website: "https://jackmasonbrand.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Jorg Gray Watches", Website: "https://jorggray.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Lorier Watches", Website: "https://www.lorierwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Lum-Tec Watches", Website: "https://lum-tec.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Mark Time Watches", Website: "https://marktimewatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Matthew Mercury Watches", Website: "https://matthew-mercury.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Mercer Watch Co", Website: "https://mercerwatchco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Minim Watches", Website: "https://minim-watches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "MkII Watches", Website: "https://mkiiwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Monta Watch", Website: "https://montawatch.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Moterey Watch Co", Website: "https://montereywatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Nodus Watches", Website: "https://www.noduswatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Northern Star Watches", Website: "https://www.northernstarwatch.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Oak & Oscar Watches", Website: "https://oakandoscar.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Ocean Crawler Watch Co", Website: "https://www.oceancrawler.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Orion Watches", Website: "https://orionwatch.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Pelton Watch Company", Website: "https://peltonwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Raven Watches", Website: "https://ravenwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "RGM Watches", Website: "https://www.rgmwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Sangin Instruments", Website: "https://sangininstruments.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Seals Watch Company", Website: "https://sealswatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Sel Instrument", Website: "https://selinstrument.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Sheffield Watches", Website: "https://sheffieldwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Shinloa Watches", Website: "https://www.shinola.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Tool Watch Co", Website: "https://toolwatchco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Towson Watch Company", Website: "https://www.towsonwatchcompany.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Trafford Watch Co", Website: "https://www.traffordwatchco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Traska Watches", Website: "https://www.traskawatch.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Tsao Baltimore Watches", Website: "https://tsaobaltimore.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Varius Watches", Website: "https://www.variuswatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Vear Watches", Website: "https://www.vaerwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Vero Watch Company", Website: "https://vero-watch.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Visitor Watch Co", Website: "https://www.visitorwatchco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Waldan Watches", Website: "https://waldanwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Weiss Watch Company", Website: "https://weisswatchcompany.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Xeric Watches", Website: "https://www.xeric.com/" },
-  { Continent: "Oceania", Country: "Australia", Brand: "Erebus Watches", Website: "https://erebuswatches.com/" },
-  { Continent: "Oceania", Country: "Australia", Brand: "Galvin Watch Com", Website: "https://galvinwatchcompany.com.au/" },
-  { Continent: "Oceania", Country: "Australia", Brand: "Hz Watches", Website: "https://hzwatches.com/" },
-  { Continent: "Oceania", Country: "Australia", Brand: "Melbourne Watch Company", Website: "https://www.melbournewatch.com.au/" },
-  { Continent: "Oceania", Country: "Australia", Brand: "Second Hour Watches", Website: "https://www.secondhour.com.au/" },
-  { Continent: "Oceania", Country: "New Zealand", Brand: "Draken Watches", Website: "https://www.drakenwatches.com/" },
-  { Continent: "Oceania", Country: "New Zealand", Brand: "Margette and Belmoto", Website: "https://magrette.com/" },
-  { Continent: "South America", Country: "Brasil", Brand: "Terranova Watches", Website: "https://terranovawatches.com/en/" },
-  { Continent: "Europe", Country: "UK", Brand: "Bamford of London", Website: "https://bamfordlondon.com/" },
-  { Continent: "Europe", Country: "Netherlands", Brand: "Batavi Watches Amsterdam", Website: "https://www.batavi-watches.com/" },
-  { Continent: "Oceania", Country: "Australia", Brand: "Bausele", Website: "https://www.bausele.com/" },
-  { Continent: "Oceania", Country: "New Zealand", Brand: "Beaufort", Website: "https://www.beaufort-watches.com/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "Benarus", Website: "https://www.benaruswatch.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Bernhardt", Website: "https://www.bernhardtwatch.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Bertucci", Website: "https://bertucciwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Bespoke Watch Projects", Website: "https://www.bespokewatchprojects.com/" },
-  { Continent: "Europe", Country: "Slovakia", Brand: "Biatec", Website: "https://www.biatecwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Blacklist", Website: "https://www.blacklistwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Blanchard", Website: "https://blanchardwatchco.com/" },
-  { Continent: "Europe", Country: "France", Brand: "BND Watches", Website: "https://bnd-watches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Bob Wellson", Website: "https://www.bobwellson.com/" },
-  { Continent: "Europe", Country: "France", Brand: "Bohen", Website: "https://www.bohen-watches.com/en" },
-  { Continent: "North America", Country: "USA", Brand: "Boschett", Website: "https://www.boschett-timepieces.com/" },
-  { Continent: "Europe", Country: "Norway", Brand: "Bragdur", Website: "https://bragdur.no/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Brellum", Website: "https://www.brellum.swiss/en/" },
-  { Continent: "North America", Country: "USA", Brand: "Bremoir", Website: "https://www.bremoir.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Brew Watch Co.", Website: "https://www.brew-watches.com/" },
-  { Continent: "Europe", Country: "Netherlands", Brand: "Brunmontagne", Website: "https://www.brunmontagne.com/" },
-  { Continent: "Europe", Country: "Denmark", Brand: "Buur Watches", Website: "https://buurwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Camp Watches", Website: "https://campwatches.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Canister Watches", Website: "https://canisterwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Carpenter Watches", Website: "https://carpenterwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Castle & Gazelle", Website: "https://castleandgazelle.com/" },
-  { Continent: "South America", Country: "Chile", Brand: "Castor Watches", Website: "https://castor-watches.com/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "Celadon (Maison Celadon Watches)", Website: "https://celadonhh.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Celegin", Website: "https://www.celegin.se/" },
-  { Continent: "Europe", Country: "UK", Brand: "Cestrian", Website: "https://cestrianwatches.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Circula Watches", Website: "https://circulawatches.com/en/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "CJR", Website: "https://cjrwatches.com/" },
-  { Continent: "Europe", Country: "Spain", Brand: "Colomer & Sons", Website: "https://colomerandsons.com/en/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Concentric Watches", Website: "https://concentric-watch.com/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "Constellar", Website: "https://constellartimepieces.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Cooper Watches", Website: "https://www.cooperwatches.co.uk/home-1/" },
-  { Continent: "Europe", Country: "Netherlands", Brand: "d.m.h. Dingemans Mechanische Horloges", Website: "https://dingemansmechanischehorloges.nl/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Damasko", Website: "https://www.damasko-watches.com/en/" },
-  { Continent: "North America", Country: "USA", Brand: "Dan Henry", Website: "https://danhenrywatches.com/" },
-  { Continent: "Asia", Country: "Philippines", Brand: "De Guzman & Co", Website: "https://www.deguzmanandco.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Decima", Website: "https://decima-watches.com/" },
-  { Continent: "Asia", Country: "Japan", Brand: "Dedegumo", Website: "https://www.dedegumo.jp/" },
-  { Continent: "North America", Country: "USA", Brand: "Deep Blue (legacy mirco)", Website: "https://www.deepbluewatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "DeMarco Watch Co.", Website: "https://www.demarcowatches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Dennison", Website: "https://dennisonwatch.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Diatom Watches", Website: "https://www.diatomwatches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Dietrich", Website: "https://dietrich.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Dievas", Website: "https://www.dievaswatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Dificiano", Website: "https://www.dificianowatches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Done", Website: "https://www.donewatches.ch/en/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "double VE", Website: "https://double-ve.ch/" },
-  { Continent: "Europe", Country: "UK", Brand: "Drayton Watches", Website: "https://draytonwatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Duckworth Prestex", Website: "https://duckworthprestex.com/" },
-  { Continent: "Asia", Country: "Hong Kong", Brand: "Duzu Watches", Website: "https://www.duzuwatches.com/" },
-  { Continent: "Europe", Country: "Switzerland", Brand: "Dwiss", Website: "https://www.dwiss.com/" },
-  { Continent: "North America", Country: "USA", Brand: "EDC Hardwear", Website: "https://www.edchardwear.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Edward Christopher", Website: "https://edwardchristopher.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Egard", Website: "https://www.egardwatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Elliot Brown", Website: "https://elliotbrownwatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "EMG Watches", Website: "https://emgwatches.com/" },
-  { Continent: "Europe", Country: "Denmark", Brand: "Enoksen", Website: "https://www.byenoksen.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Ergon", Website: "https://ergonwatches.com/" },
-  { Continent: "Oceania", Country: "Asutralia", Brand: "Erroyl", Website: "https://www.erroyl.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Esoteric Watches", Website: "https://esotericwatches.com/" },
-  { Continent: "Europe", Country: "Hungary", Brand: "Evolvens", Website: "https://evolvens.com/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Eza", Website: "https://ezawatches.com/" },
-  { Continent: "Europe", Country: "Italy", Brand: "Fathers", Website: "https://fatherswatches.com/" },
-  { Continent: "North America", Country: "Canada", Brand: "Ferro & Company", Website: "https://www.ferrowatches.com/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "Feynman Timekeepers", Website: "https://feynman.watch/" },
-  { Continent: "Europe", Country: "Germany", Brand: "Findeisen", Website: "https://www.findeisen-uhren.com/en" },
-  { Continent: "Europe", Country: "UK", Brand: "Firle Watches", Website: "https://firlewatches.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Fleddermann von Rieste", Website: "https://vonrieste.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Foliot", Website: "https://www.foliotwatches.com/" },
-  { Continent: "Asia", Country: "Japan", Brand: "Fukushima Watch Co.", Website: "https://shop.fukushima-watch.com/" },
-  { Continent: "Europe", Country: "Portugal", Brand: "Galo", Website: "https://watchesgalo.com/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "Gane Watches", Website: "https://www.ganewatches.com/" },
-  { Continent: "Europe", Country: "UK", Brand: "Geckota", Website: "https://www.geckota.com/" },
-  { Continent: "Europe", Country: "Sweden", Brand: "Geltier", Website: "https://geltier.com/" },
-  { Continent: "Asia", Country: "Singapore", Brand: "Geylang Watch Co", Website: "https://geylangwatchco.store/" },
-  { Continent: "North America", Country: "USA", Brand: "GhostTown", Website: "https://ghosttownwatches.com/" },
-  { Continent: "Asia", Country: "China", Brand: "Good + Evil", Website: "https://goodplusevil.com/" },
-  { Continent: "Europe", Country: "Italy", Brand: "Gravithin", Website: "https://www.gravithin.com/" },
-  { Continent: "North America", Country: "USA", Brand: "Greg Stevens Design", Website: "https://www.gregstevensdesign.com/" },
- { Continent: "Asia", Country: "Singapore", Brand: "Gruppo Gamma", Website: "https://gruppogamma.com/" },
- { Continent: "Europe", Country: "Germany", Brand: "H2O", Website: "https://www.h2o-watch.com/" },
- { Continent: "North America", Country: "USA", Brand: "Hager", Website: "https://www.hagerwatches.com/" },
- { Continent: "Oceania", Country: "Asutralia", Brand: "Haigh & Hastings", Website: "https://www.haighandhastings.com/" },
- { Continent: "Asia", Country: "China", Brand: "Halcyon Watch", Website: "https://halcyonwatch.com/" },
- { Continent: "Asia", Country: "Taiwan", Brand: "Havaan Tuvali", Website: "https://www.havaantuvali.com/" },
- { Continent: "Europe", Country: "Germany", Brand: "Heinrich", Website: "https://heinrich.watch/" },
- { Continent: "Europe", Country: "Switzerland", Brand: "Helfer", Website: "https://www.helferwatches.com/" },
- { Continent: "North America", Country: "Canada", Brand: "Helgray", Website: "https://www.helgray.com/collections/watches" },
- { Continent: "Europe", Country: "UK", Brand: "Helicon", Website: "https://heliconwatches.com/" },
- { Continent: "North America", Country: "USA", Brand: "Helm", Website: "https://helmwatches.com/index.html" },
- { Continent: "Asia", Country: "Hong Kong", Brand: "Helson", Website: "https://www.helsonwatches.com/" },
- { Continent: "North America", Country: "Canada", Brand: "Héron", Website: "https://www.heronwatches.com/" },
- { Continent: "North America", Country: "USA", Brand: "Hesili", Website: "https://hesiliny.com/" },
- { Continent: "Asia", Country: "Hong Kong", Brand: "HKED", Website: "https://www.hkedwatches.com/" },
- { Continent: "Asia", Country: "Singapore", Brand: "Horizon", Website: "https://www.horizon-watches.com/" },
- { Continent: "Oceania", Country: "Australia", Brand: "Houtman", Website: "https://houtmanwatch.com/" },
- { Continent: "Oceania", Country: "Australia", Brand: "Huizen Watches", Website: "https://huizenwatches.com/" },
- { Continent: "Europe", Country: "Sweden", Brand: "Hult", Website: "https://hultwatches.com/" },
- { Continent: "Asia", Country: "Hong Kong", Brand: "Humism", Website: "https://humism.com/" },
- { Continent: "Asia", Country: "Philippines", Brand: "Ibarra", Website: "https://ibarra.ph/" },
- { Continent: "Europe", Country: "Italy", Brand: "Ichnos", Website: "https://www.ichnoswatches.com/en/" },
- { Continent: "Europe", Country: "Switzerland", Brand: "ID Genève", Website: "https://www.idwatch.ch/" },
- { Continent: "North America", Country: "USA", Brand: "Imperial Watch Co.", Website: "https://imperialwatchco.com/" },
- { Continent: "Europe", Country: "UK", Brand: "Isotope", Website: "https://isotopewatches.com/" },
- { Continent: "North America", Country: "USA", Brand: "J.Ciro", Website: "https://www.jcirowatches.com/" },
- { Continent: "Europe", Country: "Germany", Brand: "Jaeger & Benzinger", Website: "https://www.jaeger-benzinger.com/" },
- { Continent: "Europe", Country: "UK", Brand: "K. Grün & Söhne", Website: "https://www.grunandsohne.com/" },
- { Continent: "Europe", Country: "Sweden", Brand: "Karlskrona Watch Company", Website: "https://www.karlskronawatch.com/" },
- { Continent: "Europe", Country: "Switzerland", Brand: "Kazimon", Website: "https://kazimon.com/" },
- { Continent: "Europe", Country: "Netherlands", Brand: "Ketelaars Watches", Website: "https://ketelaarswatches.com/" },
- { Continent: "Europe", Country: "France", Brand: "Klokers", Website: "https://www.klokers.com/en" },
- { Continent: "North America", Country: "USA", Brand: "Kobold Watches", Website: "https://koboldwatch.com/" },
- { Continent: "North America", Country: "USA", Brand: "Korsbek", Website: "http://korsbek.com/index.php" },
- { Continent: "TBC", Country: "TBC", Brand: "Kuruvakka", Website: "https://kuruvakka.com/" },
- { Continent: "TBC", Country: "TBC", Brand: "Lachlann", Website: "https://www.lachlanknox.com.au/" },
- { Continent: "Europe", Country: "Switzerland", Brand: "Laine Watches", Website: "https://www.lainewatches.com/" },
- { Continent: "North America", Country: "USA", Brand: "LaMotte", Website: "https://www.lamottewatchco.com/" },
-{ Continent: "North America", Country: "United States", Brand: "Lesablier", Website: "https://www.lesablierwatches.com/" },
-{ Continent: "Asia", Country: "Indonesia", Brand: "Lima Watch", Website: "https://limawatch.com/" },
-{ Continent: "North America", Country: "Canada", Brand: "Locke & King", Website: "https://lockeandking.ca/" },
-{ Continent: "North America", Country: "Canada", Brand: "Locke & King", Website: "https://lockeandking.ca/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Loresum", Website: "https://loresum.watch/" },
-{ Continent: "Oceania", Country: "New Zealand", Brand: "Magrette", Website: "https://magrette.com/" },
-{ Continent: "Asia", Country: "India", Brand: "Majestic Craftsmen", Website: "https://www.majesticcraftsmen.com/" },
-{ Continent: "North America", Country: "Canada", Brand: "Makara Watches", Website: "https://www.makarawatches.com/" },
-{ Continent: "North America", Country: "Canada", Brand: "Maker Watch Company", Website: "https://www.makerwatchcompany.com/" },
-{ Continent: "Europe", Country: "Norway", Brand: "MAKT", Website: "https://www.makt.store/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Manufaktur Waldhoff", Website: "https://manufaktur-waldhoff.de/" },
-{ Continent: "Asia", Country: "Thailand", Brand: "Maranez", Website: "https://www.maranez.com/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Marc & Sons", Website: "https://marcandsons.de/" },
-{ Continent: "North America", Country: "United States", Brand: "Marin Instruments", Website: "https://www.marininstruments.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Marlin UK", Website: "https://www.marlinwatch.co.uk/" },
-{ Continent: "North America", Country: "United States", Brand: "Martenero", Website: "https://martenero.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Mater Made", Website: "https://matermade.com/" },
-{ Continent: "Europe", Country: "Switzerland", Brand: "Matterhorn Watch Co.", Website: "https://www.matterhornwatchco.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "McQuaide", Website: "https://mcquaide.co.uk/" },
-{ Continent: "Asia", Country: "India", Brand: "Medeor", Website: "https://www.medeorwatches.com/" },
-{ Continent: "Europe", Country: "Italy", Brand: "Memphis Belle", Website: "https://memphisbellewatches.shop/" },
-{ Continent: "Europe", Country: "Denmark", Brand: "Miang Copenhagen", Website: "https://www.labcopenhagen.dk/en" },
-{ Continent: "Europe", Country: "Iceland", Brand: "Michelsen Watchmakers", Website: "https://michelsen.is/" },
-{ Continent: "Europe", Country: "Switzerland", Brand: "Milléchron / Atelier Millésime", Website: "https://millechron.ch/" }, 
-{ Continent: "North America", Country: "United States", Brand: "Minuteman", Website: "https://minutemanwatches.com/" }, 
-{ Continent: "Asia", Country: "Singapore", Brand: "Mitch Mason", Website: "https://www.mitchmason.com/" }, 
-{ Continent: "North America", Country: "United States", Brand: "MK II (legacy micro)", Website: "https://mkiiwatches.com/" }, 
-{ Continent: "North America", Country: "United States", Brand: "MKll", Website: "https://mkiiwatches.com/" }, 
-{ Continent: "Europe", Country: "Portugal", Brand: "Monarte Watches", Website: "https://monartewatches.com/" }, 
-{ Continent: "Asia", Country: "Hong Kong", Brand: "Monbrey", Website: "https://monbrey.com/" },
-{ Continent: "Europe", Country: "France", Brand: "Montmartre Watchworks", Website: "https://www.montmartre-watchworks.com/" },
-{ Continent: "Europe", Country: "France", Brand: "Montoir", Website: "https://montoir-watches.com/" },
-{ Continent: "Europe", Country: "France", Brand: "Montres Le Forban", Website: "https://leforbansecuritemer.com/en/" },
-{ Continent: "Europe", Country: "Switzerland", Brand: "MoVas", Website: "https://movaswatches.com/" },
-{ Continent: "Europe", Country: "Germany", Brand: "MTK Watches", Website: "https://mtkwatches.com/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Mu:n Watches", Website: "https://www.mun-watches.com/" },
-{ Continent: "Europe", Country: "Germany", Brand: "MwM Atelier", Website: "https://mwm-atelier.com/" },
-{ Continent: "Europe", Country: "France", Brand: "Nadir", Website: "https://nadirwatches.com/" },
-{ Continent: "Europe", Country: "France", Brand: "Nautage", Website: "https://nautage.com/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Neuhaus", Website: "https://www.neuhaus.com/" },
-{ Continent: "Europe", Country: "Sweden", Brand: "Nezumi Studios", Website: "https://www.nezumistudios.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "NFW", Website: "https://nfwonline.com/" },
-{ Continent: "Europe", Country: "Italy", Brand: "NIMA Watches", Website: "https://www.nimawatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Nine Four Watches", Website: "https://www.ninefourwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "No-Watch Company", Website: "https://nowatch.com/shop" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Noctua Watch Corp.", Website: "https://noctuawatchcorp.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Nomadic", Website: "https://nomadicwatches.com/" },
-{ Continent: "Europe", Country: "Sweden", Brand: "Nordberg Watches", Website: "https://www.nordbergwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Nordic Marine", Website: "https://nordicmarineinstruments.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Northgate", Website: "https://www.northgatewatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Objest", Website: "http://objest.com/" },
-{ Continent: "Asia", Country: "Hong Kong", Brand: "Obris Morgan", Website: "https://www.obrismorgan.com/" },
-{ Continent: "Europe", Country: "Denmark", Brand: "Ocean7", Website: "https://ocean7watchco.com/" },
-{ Continent: "Europe", Country: "Switzerland", Brand: "Ochs und Junior", Website: "https://www.ochsundjunior.swiss/watches/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Octon", Website: "https://octonwatches.co.uk/home/" },
-{ Continent: "Europe", Country: "Italy", Brand: "Officine Tecniche", Website: "https://officinetecnichewatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Oligo", Website: "https://oligowatches.com/" },
-{ Continent: "Europe", Country: "Switzerland", Brand: "Ollech & Wajs", Website: "https://ow-watch.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Olto-8", Website: "https://olto-8.com/" },
-{ Continent: "Europe", Country: "Wales", Brand: "Oriorwaith J. Sarnowski", Website: "https://sarnowski.cymru/" },
-{ Continent: "North America", Country: "United States", Brand: "Outcast Watch", Website: "https://www.outcastwatch.com/" },
-{ Continent: "Europe", Country: "Poland", Brand: "Ovsky", Website: "https://ovskywatches.com/en" },
-{ Continent: "Europe", Country: "Greece", Brand: "Palmos", Website: "https://www.palmos-watches.com/" },
-{ Continent: "Europe", Country: "Italy", Brand: "Pancor", Website: "https://pancorwatch.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Paul Bowman", Website: "https://www.bowmanlondon.com/" },
-{ Continent: "Europe", Country: "France", Brand: "Paulin", Website: "https://www.paulinwatches.com/" },
-{ Continent: "Europe", Country: "Portugal", Brand: "Pedral", Website: "https://www.pedral.eu/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Peren", Website: "https://perenwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Perpetual Watch Company", Website: "https://www.perpetual-watch.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Pinion", Website: "https://www.pinionwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Praetorian", Website: "https://www.milwatches.com/en/PRAETORIAN-Watches/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Precista", Website: "https://www.timefactors.com/collections/precista" },
-{ Continent: "North America", Country: "United States", Brand: "Prevail", Website: "https://prevailwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Quasar", Website: "https://quasarwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Radcliffe Watches", Website: "https://www.radcliffewatches.com/" },
-{ Continent: "North America", Country: "United States", Brand: "Rebel Time", Website: "https://rebelbrooklyn.com/" },
-{ Continent: "Europe", Country: "Netherlands", Brand: "REC Watches", Website: "https://www.recwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Redux", Website: "https://reduxwatch.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Regia", Website: "https://regia-timepieces.com/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Reisner", Website: "https://www.reiserwatches.com/" },
-{ Continent: "Europe", Country: "Switzerland", Brand: "Relio", Website: "https://reliowatches.com/" },
-{ Continent: "North America", Country: "United States", Brand: "Resco", Website: "https://rescoinstruments.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Reverie", Website: "https://www.reveriewatches.com/" },
-{ Continent: "North America", Country: "United States", Brand: "Revolution Watch Company", Website: "https://shop.revolutionwatch.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Riskers", Website: "https://riskers-watches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Roebuck Watch Company", Website: "https://www.roebuckwatchco.com/" },
-{ Continent: "Europe", Country: "Ireland", Brand: "Rosenbusch", Website: "https://rosenbusch-watches.com/en-irl" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Roue", Website: "https://rouewatch.com/" },
-{ Continent: "North America", Country: "United States", Brand: "RPaige", Website: "https://www.rpaigewatch.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "RVLVR", Website: "https://rvlvr.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Sablier", Website: "https://www.sablierwatches.com/" },
-{ Continent: "North America", Country: "United States", Brand: "Sangamon", Website: "https://sangamonwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Schofield", Website: "https://schofieldwatchcompany.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Sconvolto", Website: "https://www.sconvolto.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Scurfa", Website: "https://www.scurfawatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Seaborne", Website: "https://seabornewatch.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Selten", Website: "https://seltenwatch.com/" },
-{ Continent: "North America", Country: "Canada", Brand: "Shelby Watch Company", Website: "https://shelbywatchco.ca/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Sidereus Watches", Website: "https://sidereus.com/sidereus/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Smith Bradley", Website: "https://smithandbradley.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Smiths", Website: "https://www.smithswatches.com/" },
-{ Continent: "Europe", Country: "Ireland", Brand: "Solas", Website: "https://solaswatches.com/" },
-{ Continent: "Asia", Country: "Singapore", Brand: "Spectre Time", Website: "https://www.spectre-time.com/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Staalblock", Website: "https://www.staalblock.de/" },
-{ Continent: "Europe", Country: "Italy", Brand: "Stefano Braga Watches", Website: "https://www.stefanobragawatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Stella Watches", Website: "https://stellawatchcompany.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Stirling", Website: "https://stirlingtimepieces.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Stranger Watch Co.", Website: "https://strangertime.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Strond", Website: "https://www.stronduk.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Subdelta", Website: "https://subdelta.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Svalbard", Website: "https://svalbard.watch/index.html" },
-{ Continent: "North America", Country: "Canada", Brand: "Tactico", Website: "https://tacticowatches.com/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Temption", Website: "http://www.temption-watches.de/e/englisch.htm" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Tessé Watches", Website: "https://tesse-watches.com/" },
-{ Continent: "Asia", Country: "India", Brand: "Thacker Merali", Website: "https://www.thackermerali.com/" },
-{ Continent: "North America", Country: "United States", Brand: "The Abingdon Co.", Website: "https://abingdonco.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Theorema", Website: "https://theoremawatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Timefactors", Website: "https://www.timefactors.com/" },
-{ Continent: "Europe", Country: "Italy", Brand: "Tissel", Website: "https://www.tisellwatch.com/" },
-{ Continent: "North America", Country: "United States", Brand: "Tornek-Rayville (legacy micro)", Website: "https://tornek-rayville.us/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Tourby Watches", Website: "https://www.tourbywatches.com/" },
-{ Continent: "Europe", Country: "Switzerland", Brand: "Trematic", Website: "https://trematicwatch.com/" },
-{ Continent: "North America", Country: "United States", Brand: "True North Watch Company", Website: "https://www.truenorthcollections.com/the-watches" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Tuul", Website: "https://tuulwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Typsim", Website: "https://www.typsim.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Ubiq", Website: "https://ubiqwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Ugly Watch Co", Website: "https://uglywatchco.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "UTC", Website: "https://utc-watch.com/" },
-{ Continent: "North America", Country: "United States", Brand: "Vaer Watches (legacy micro)", Website: "https://www.vaerwatches.com/" },
-{ Continent: "Europe", Country: "Norway", Brand: "Valhalla of Norway", Website: "https://valhallaofnorway.no/en/" },
-{ Continent: "North America", Country: "Canada", Brand: "Vanbanner", Website: "https://vanbannerwatches.com/" },
-{ Continent: "North America", Country: "Canada", Brand: "Vancouver Watch Co", Website: "https://vancouverwatchco.com/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Vandaag", Website: "https://www.vandaag.de/" },
-{ Continent: "Europe", Country: "Germany", Brand: "VDB", Website: "https://vintage-vdb.com/en/" },
-{ Continent: "Europe", Country: "Denmark", Brand: "VEJRHØJ", Website: "https://vejrhoj.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Ventus Watches", Website: "https://ventuswatches.com/" },
-{ Continent: "Europe", Country: "Italy", Brand: "VeriWatch", Website: "https://www.veriwatch.it/en/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Vertigo", Website: "https://www.vertigowatches.com/" },
-{ Continent: "Europe", Country: "Denmark", Brand: "Vilhelm", Website: "https://www.vilhelmwatches.com/" },
-{ Continent: "Europe", Country: "Spain", Brand: "Viqueria Watches", Website: "https://www.viqueriawatches.com/" },
-{ Continent: "Europe", Country: "Austria", Brand: "Viribus Unitis", Website: "https://www.viribusunitis-watches.com/en/" },
-{ Continent: "Europe", Country: "Netherlands", Brand: "Visser", Website: "https://visserwatch.com/" },
-{ Continent: "Europe", Country: "Denmark", Brand: "Vitreum", Website: "https://www.vitreumwatches.com/" },
-{ Continent: "Europe", Country: "Germany", Brand: "Von Doren Fine Time Pieces", Website: "https://www.vondoren.com/" },
-{ Continent: "North America", Country: "United States", Brand: "Vortic", Website: "https://vorticwatches.com/" },
-{ Continent: "Europe", Country: "Russia", Brand: "Vostok Samara", Website: "https://vostok-europe.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Wayforth", Website: "https://wayforthwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Wessex Watches", Website: "https://www.wessexwatches.co.uk/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Wilk WatchWorks", Website: "https://www.wilkwatchworks.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "William Wood", Website: "https://williamwoodwatches.com/" },
-{ Continent: "North America", Country: "United States", Brand: "Winfield Watch Company", Website: "https://winfieldwatch.com/" },
-{ Continent: "Asia", Country: "Hong Kong", Brand: "Wolkov", Website: "https://www.wolkov.design/" },
-{ Continent: "North America", Country: "United States", Brand: "Wrist Hardware", Website: "https://wristhardware.com/" },
-{ Continent: "Asia", Country: "China", Brand: "Xam", Website: "https://www.xamlam.com/" },
-{ Continent: "North America", Country: "Canada", Brand: "York & Front Watch Co.", Website: "https://yorkfront.com/" },
-{ Continent: "Oceania", Country: "New Zealand", Brand: "Zealandic", Website: "https://www.zealandic.co.nz/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Zenton", Website: "https://www.zentonwatches.com/" },
-{ Continent: "Europe", Country: "United Kingdom", Brand: "Zero West", Website: "https://zerowest.watch/" },
-{ Continent: "Asia", Country: "United States", Brand: "Zinvo", Website: "https://zinvowatches.com/" }
-];
+ const DATA =
+ [
+  {
+    "Continent": "Asia",
+    "Country": "China",
+    "Brand": "Aragon Watch Co",
+    "Website": "https://www.aragonwatch.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "China",
+    "Brand": "Atelier Wen",
+    "Website": "https://us.atelierwen.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "China",
+    "Brand": "Baltany Watches",
+    "Website": "https://www.baltany.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "China",
+    "Brand": "Signum Watches",
+    "Website": "https://www.signumwatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "China",
+    "Brand": "Straton Watch Company",
+    "Website": "https://www.stratonwc.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "China",
+    "Brand": "Sugess Watches",
+    "Website": "https://www.sugessofficial.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "China",
+    "Brand": "Yeland Watch",
+    "Website": "https://grmontrewatches.com/collections/yelang"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "China",
+    "Brand": "Good + Evil",
+    "Website": "https://goodplusevil.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "China",
+    "Brand": "Halcyon Watch",
+    "Website": "https://halcyonwatch.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "China",
+    "Brand": "Xam",
+    "Website": "https://www.xamlam.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Aision Watch Co",
+    "Website": "https://aisiondesign.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Andersmann Watch Co",
+    "Website": "https://www.andersmann.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Angles Watches",
+    "Website": "https://angleswatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "AVI-8 Watches",
+    "Website": "https://avi-8.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Belhamel Watches",
+    "Website": "https://www.belhamel.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Boldr Supply Co",
+    "Website": "https://www.boldrsupply.co/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Crafter Blue",
+    "Website": "https://www.crafterblue.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "MT&W Watches",
+    "Website": "https://mtw.watch/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "OVD Watches",
+    "Website": "https://www.ovd.com.hk/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Phoibos Watches",
+    "Website": "https://phoiboswatch.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "RZE Watches",
+    "Website": "https://www.rzewatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Benarus",
+    "Website": "https://www.benaruswatch.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "CJR",
+    "Website": "https://cjrwatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Duzu Watches",
+    "Website": "https://www.duzuwatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Helson",
+    "Website": "https://www.helsonwatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "HKED",
+    "Website": "https://www.hkedwatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Humism",
+    "Website": "https://humism.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Monbrey",
+    "Website": "https://monbrey.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Obris Morgan",
+    "Website": "https://www.obrismorgan.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Hong Kong",
+    "Brand": "Wolkov",
+    "Website": "https://www.wolkov.design/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "India",
+    "Brand": "Ajwain Watches",
+    "Website": "https://ajwa.in/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "India",
+    "Brand": "Bangalore Watch Company",
+    "Website": "https://www.bangalorewatchco.in/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "India",
+    "Brand": "Jaipur Watches",
+    "Website": "https://jaipur.watch/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "India",
+    "Brand": "Horpa Watches",
+    "Website": "https://horpawatch.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "India",
+    "Brand": "Majestic Craftsmen",
+    "Website": "https://www.majesticcraftsmen.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "India",
+    "Brand": "Medeor",
+    "Website": "https://www.medeorwatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "India",
+    "Brand": "Thacker Merali",
+    "Website": "https://www.thackermerali.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Indonesia",
+    "Brand": "Lima Watch",
+    "Website": "https://limawatch.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Japan",
+    "Brand": "Aevum Timepieces",
+    "Website": "https://www.aevumtime.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Japan",
+    "Brand": "Kikuchi Nakagawa",
+    "Website": "https://kikuchi-nakagawa.com/en/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Japan",
+    "Brand": "Kuoe  Kyoto",
+    "Website": "https://www.kuoe-en.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Japan",
+    "Brand": "Kurono Tokyo",
+    "Website": "https://kuronotokyo.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Japan",
+    "Brand": "Namica Watches",
+    "Website": "https://www.namicawatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Japan",
+    "Brand": "Naoua Hida & Co.",
+    "Website": "https://naoyahidawatch.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Japan",
+    "Brand": "Otsuka Lotec.",
+    "Website": "https://otsuka-lotec.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Japan",
+    "Brand": "Wancher Watch",
+    "Website": "https://wancherwatch.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Japan",
+    "Brand": "Dedegumo",
+    "Website": "https://www.dedegumo.jp/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Japan",
+    "Brand": "Fukushima Watch Co.",
+    "Website": "https://shop.fukushima-watch.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Malaysia",
+    "Brand": "Alcadus Watches",
+    "Website": "https://alcadus.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Malaysia",
+    "Brand": "Aerotec Watches",
+    "Website": "https://aerotecwatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Malaysia",
+    "Brand": "Revelot Watches",
+    "Website": "https://www.revelot.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Philippines",
+    "Brand": "Argos Watch Corporation",
+    "Website": "https://argos-watches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Philippines",
+    "Brand": "Makina Watches",
+    "Website": "https://www.makinawatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Philippines",
+    "Brand": "De Guzman & Co",
+    "Website": "https://www.deguzmanandco.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Philippines",
+    "Brand": "Ibarra",
+    "Website": "https://ibarra.ph/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Audric Watches",
+    "Website": "https://audricwatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "MMI Watches",
+    "Website": "https://www.mmiwatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Vario Watches",
+    "Website": "https://vario.sg/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Vesuviate Watches",
+    "Website": "https://vesuviate.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Vostra Designs",
+    "Website": "https://vostradesigns.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Zelos Watches",
+    "Website": "https://zeloswatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Celadon (Maison Celadon Watches)",
+    "Website": "https://celadonhh.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Constellar",
+    "Website": "https://constellartimepieces.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Feynman Timekeepers",
+    "Website": "https://feynman.watch/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Gane Watches",
+    "Website": "https://www.ganewatches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Geylang Watch Co",
+    "Website": "https://geylangwatchco.store/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Gruppo Gamma",
+    "Website": "https://gruppogamma.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Horizon",
+    "Website": "https://www.horizon-watches.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Mitch Mason",
+    "Website": "https://www.mitchmason.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Singapore",
+    "Brand": "Spectre Time",
+    "Website": "https://www.spectre-time.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "South Korea",
+    "Brand": "Pitzmann Watches",
+    "Website": "https://www.pitzmann.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Taiwan",
+    "Brand": "Valimor Watches",
+    "Website": "https://www.valimor.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Taiwan",
+    "Brand": "Havaan Tuvali",
+    "Website": "https://www.havaantuvali.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Thailand",
+    "Brand": "Wise Watches",
+    "Website": "https://wisetimepiece.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "Thailand",
+    "Brand": "Maranez",
+    "Website": "https://www.maranez.com/"
+  },
+  {
+    "Continent": "Asia",
+    "Country": "United States",
+    "Brand": "Zinvo",
+    "Website": "https://zinvowatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Austria",
+    "Brand": "Habring2 Watches",
+    "Website": "https://www.habring2.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Austria",
+    "Brand": "Viribus Unitis",
+    "Website": "https://www.viribusunitis-watches.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Belgium",
+    "Brand": "Gavox Watches",
+    "Website": "https://gavox.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Belgium",
+    "Brand": "Ikigai Watches",
+    "Website": "https://ikigaiwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Denmark",
+    "Brand": "Henry Archer",
+    "Website": "https://henryarcher.com/en-us"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Denmark",
+    "Brand": "Buur Watches",
+    "Website": "https://buurwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Denmark",
+    "Brand": "Enoksen",
+    "Website": "https://www.byenoksen.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Denmark",
+    "Brand": "Miang Copenhagen",
+    "Website": "https://www.labcopenhagen.dk/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Denmark",
+    "Brand": "Ocean7",
+    "Website": "https://ocean7watchco.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Denmark",
+    "Brand": "VEJRHØJ",
+    "Website": "https://vejrhoj.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Denmark",
+    "Brand": "Vilhelm",
+    "Website": "https://www.vilhelmwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Denmark",
+    "Brand": "Vitreum",
+    "Website": "https://www.vitreumwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Finland",
+    "Brand": "AndoAndoAndo",
+    "Website": "https://andoandoando.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Finland",
+    "Brand": "Gronefeld",
+    "Website": "https://www.gronefeld.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Finland",
+    "Brand": "Pook Watches",
+    "Website": "https://official.pookwatches.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Finland",
+    "Brand": "Studio Sarpaneva",
+    "Website": "https://studiosarpaneva.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Finland",
+    "Brand": "Voutilinen",
+    "Website": "https://www.voutilainen.ch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Baltic Watches",
+    "Website": "https://baltic-watches.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Beaubleu Watches",
+    "Website": "https://beaubleu-paris.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Corniche",
+    "Website": "https://cornichewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Depancel Watches",
+    "Website": "https://depancel.com/en-eu"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Meridiano Watches",
+    "Website": "https://www.meridiano.fr/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Charlie Paris Watches",
+    "Website": "https://charlie-paris.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Eska Watches",
+    "Website": "https://eska-watches.fr/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "HGP Dive Watches",
+    "Website": "https://www.hgp-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Horoloscaphe Watches",
+    "Website": "https://www.horloscaphe-watches-paris.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Le Forban Securitare Mer",
+    "Website": "https://leforbansecuritemer.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Serica Watches",
+    "Website": "https://serica-watches.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Wolbrook Watches",
+    "Website": "https://wolbrook.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Yema Watches",
+    "Website": "https://yema.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "BND Watches",
+    "Website": "https://bnd-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Bohen",
+    "Website": "https://www.bohen-watches.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Klokers",
+    "Website": "https://www.klokers.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Montmartre Watchworks",
+    "Website": "https://www.montmartre-watchworks.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Montoir",
+    "Website": "https://montoir-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Montres Le Forban",
+    "Website": "https://leforbansecuritemer.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Nadir",
+    "Website": "https://nadirwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Nautage",
+    "Website": "https://nautage.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "France",
+    "Brand": "Paulin",
+    "Website": "https://www.paulinwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Armin Strom",
+    "Website": "https://www.arminstrom.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Archimede Watches",
+    "Website": "https://www.archimede-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Alexander Shorokhoff",
+    "Website": "https://alexander-shorokhoff.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Autran & Viala",
+    "Website": "https://www.autran-viala.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Damasko Watches",
+    "Website": "https://www.damaskowatchtechnology.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Defakto Watches",
+    "Website": "https://deklawatches.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Dekla Watches",
+    "Website": "https://www.defakto-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Glashutte Watches",
+    "Website": "https://www.glashuette-original.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Hanhart Chronographs",
+    "Website": "https://www.hanhart.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Hentschel Hamburg Watches",
+    "Website": "https://hentschel-hamburg.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Laco",
+    "Website": "https://www.laco.de/en/index"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Lang & Heyne",
+    "Website": "https://www.lang-und-heyne.de/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Limes Watches",
+    "Website": "https://www.limes-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Muhle Glashutte Watches",
+    "Website": "https://www.muehle-glashuette.de/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Sherpa Watches",
+    "Website": "https://sherpawatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Nomos Watches",
+    "Website": "https://nomos-glashuette.com/en/?showDismissibleStoreSelector=1"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Sinn Watches",
+    "Website": "https://www.sinn.de/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Steinhart Watches",
+    "Website": "https://www.steinhartwatches.de/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Sternglas Watches",
+    "Website": "https://www.sternglas.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Stowa Watches",
+    "Website": "https://www.stowa.de/?lang=eng"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Circula Watches",
+    "Website": "https://circulawatches.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Damasko",
+    "Website": "https://www.damasko-watches.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Dievas",
+    "Website": "https://www.dievaswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Eza",
+    "Website": "https://ezawatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Findeisen",
+    "Website": "https://www.findeisen-uhren.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "H2O",
+    "Website": "https://www.h2o-watch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Heinrich",
+    "Website": "https://heinrich.watch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Jaeger & Benzinger",
+    "Website": "https://www.jaeger-benzinger.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Manufaktur Waldhoff",
+    "Website": "https://manufaktur-waldhoff.de/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Marc & Sons",
+    "Website": "https://marcandsons.de/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "MTK Watches",
+    "Website": "https://mtkwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Mu:n Watches",
+    "Website": "https://www.mun-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "MwM Atelier",
+    "Website": "https://mwm-atelier.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Neuhaus",
+    "Website": "https://www.neuhaus.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Peren",
+    "Website": "https://perenwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Reisner",
+    "Website": "https://www.reiserwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Rosenbusch",
+    "Website": "https://rosenbusch-watches.com/en-irl"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Staalblock",
+    "Website": "https://www.staalblock.de/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Temption",
+    "Website": "http://www.temption-watches.de/e/englisch.htm"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Tourby Watches",
+    "Website": "https://www.tourbywatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Vandaag",
+    "Website": "https://www.vandaag.de/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "VDB",
+    "Website": "https://vintage-vdb.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Germany",
+    "Brand": "Von Doren Fine Time Pieces",
+    "Website": "https://www.vondoren.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Greece",
+    "Brand": "Palmos",
+    "Website": "https://www.palmos-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Hungary",
+    "Brand": "Evolvens",
+    "Website": "https://evolvens.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Iceland",
+    "Brand": "JS Watch Co",
+    "Website": "https://www.jswatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Iceland",
+    "Brand": "Michelsen Watchmakers",
+    "Website": "https://michelsen.is/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Ireland",
+    "Brand": "McGonigle Watches",
+    "Website": "https://www.mcgonigle.ch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Ireland",
+    "Brand": "MD Watches Studio",
+    "Website": "https://www.martindesignwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Ireland",
+    "Brand": "Solas",
+    "Website": "https://solaswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Aenigma Watches",
+    "Website": "https://www.aenigma.world/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Astrabyss Watches",
+    "Website": "https://www.astrabyss.it/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Echo/Neutra Watches",
+    "Website": "https://echoneutra.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Lamberti Orologiai",
+    "Website": "https://lamberti-orologiai.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Out of Order Watches",
+    "Website": "https://outoforderwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Unimatic Watches",
+    "Website": "https://www.unimaticwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Venezianico Watches",
+    "Website": "https://us.venezianico.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Fathers",
+    "Website": "https://fatherswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Gravithin",
+    "Website": "https://www.gravithin.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Ichnos",
+    "Website": "https://www.ichnoswatches.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Memphis Belle",
+    "Website": "https://memphisbellewatches.shop/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "NIMA Watches",
+    "Website": "https://www.nimawatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Officine Tecniche",
+    "Website": "https://officinetecnichewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Pancor",
+    "Website": "https://pancorwatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Stefano Braga Watches",
+    "Website": "https://www.stefanobragawatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "Tissel",
+    "Website": "https://www.tisellwatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Italy",
+    "Brand": "VeriWatch",
+    "Website": "https://www.veriwatch.it/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Netherlands",
+    "Brand": "Aevig Watches",
+    "Website": "https://aevig.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Netherlands",
+    "Brand": "TWCO Technical Watches",
+    "Website": "https://www.twcowatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Netherlands",
+    "Brand": "Holthinrichs Watches",
+    "Website": "https://holthinrichswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Netherlands",
+    "Brand": "Maen Watches",
+    "Website": "https://www.maenwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Netherlands",
+    "Brand": "Batavi Watches Amsterdam",
+    "Website": "https://www.batavi-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Netherlands",
+    "Brand": "Brunmontagne",
+    "Website": "https://www.brunmontagne.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Netherlands",
+    "Brand": "d.m.h. Dingemans Mechanische Horloges",
+    "Website": "https://dingemansmechanischehorloges.nl/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Netherlands",
+    "Brand": "Ketelaars Watches",
+    "Website": "https://ketelaarswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Netherlands",
+    "Brand": "REC Watches",
+    "Website": "https://www.recwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Netherlands",
+    "Brand": "Visser",
+    "Website": "https://visserwatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Norway",
+    "Brand": "Aigi Watches",
+    "Website": "https://aigitime.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Norway",
+    "Brand": "Certina Watches",
+    "Website": "https://www.certina.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Norway",
+    "Brand": "DeSanders Horologie",
+    "Website": "https://desanders.no/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Norway",
+    "Brand": "Radium Instruments",
+    "Website": "https://radiuminstruments.no/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Norway",
+    "Brand": "Straum Watches",
+    "Website": "https://straum.co/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Norway",
+    "Brand": "Bragdur",
+    "Website": "https://bragdur.no/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Norway",
+    "Brand": "MAKT",
+    "Website": "https://www.makt.store/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Norway",
+    "Brand": "Valhalla of Norway",
+    "Website": "https://valhallaofnorway.no/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Arach Watches",
+    "Website": "https://www.arachwatches.com/en-us"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Balticus Watches",
+    "Website": "https://balticus-watches.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Blonie Watches",
+    "Website": "https://zegarkiblonie.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "G.Gerlach Watches",
+    "Website": "https://www.gerlach.org.pl/en/g-gerlach/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Kollokium Watch Projects",
+    "Website": "https://kollokium.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Mudita Watches",
+    "Website": "https://mudita.com/products/watches/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Ovsky Watches",
+    "Website": "https://www.ovsky.pl/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Porpora Watches",
+    "Website": "https://www.polpora.com/manufaktura/en/home/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Radia",
+    "Website": "https://radiawatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Vratislavia Conceptum Watches",
+    "Website": "https://vratislavia-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Xicorr Watches",
+    "Website": "https://shop.xicorr.com/lang/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Poland",
+    "Brand": "Ovsky",
+    "Website": "https://ovskywatches.com/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Portugal",
+    "Brand": "Borealis Watch Co",
+    "Website": "https://www.borealiswatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Portugal",
+    "Brand": "Earhart Watches",
+    "Website": "https://earhartwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Portugal",
+    "Brand": "Escudo Watches",
+    "Website": "https://escudo-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Portugal",
+    "Brand": "Meialua Watches",
+    "Website": "https://www.meialuawatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Portugal",
+    "Brand": "Prometheus Watch Company",
+    "Website": "https://www.prometheuswatchcompany.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Portugal",
+    "Brand": "Galo",
+    "Website": "https://watchesgalo.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Portugal",
+    "Brand": "Monarte Watches",
+    "Website": "https://monartewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Portugal",
+    "Brand": "Pedral",
+    "Website": "https://www.pedral.eu/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Romania",
+    "Brand": "Albert Villa Timepieces",
+    "Website": "https://albertvillatimepieces.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Russia",
+    "Brand": "Vostok Samara",
+    "Website": "https://vostok-europe.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Slovakia",
+    "Brand": "Biatec",
+    "Website": "https://www.biatecwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Spain",
+    "Brand": "Ophion Watches",
+    "Website": "https://www.ophion-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Spain",
+    "Brand": "Minor Watches",
+    "Website": "https://minorwatches.com/en/?v=25400724d737"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Spain",
+    "Brand": "Crepas Watches",
+    "Website": "https://www.crepaswatches.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Spain",
+    "Brand": "Tempore Lux Watches",
+    "Website": "https://temporelux.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Spain",
+    "Brand": "Atelier de Chronometrie",
+    "Website": "https://www.atelierdechronometrie.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Spain",
+    "Brand": "Colomer & Sons",
+    "Website": "https://colomerandsons.com/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Spain",
+    "Brand": "Viqueria Watches",
+    "Website": "https://www.viqueriawatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Alato Watches",
+    "Website": "https://www.alato.se/en"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Alf Watch Company",
+    "Website": "https://alfwatchcompany.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Bravur Watches",
+    "Website": "https://bravurwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "GoS Watches",
+    "Website": "https://www.goswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Epoch Stockholm",
+    "Website": "https://www.epoch.se/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Halda Watch Company",
+    "Website": "https://www.haldawatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Kronaby Hybrid Watches",
+    "Website": "https://kronaby.com/en-GB/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Malm Watches",
+    "Website": "https://eu.malmwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Mean Watches",
+    "Website": "https://www.maenwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Monchard Watches",
+    "Website": "https://www.monchardwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Sjoo Sandstrom",
+    "Website": "https://www.sjoosandstrom.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Tuseno Watches",
+    "Website": "https://tuseno.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Celegin",
+    "Website": "https://www.celegin.se/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Geltier",
+    "Website": "https://geltier.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Hult",
+    "Website": "https://hultwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Karlskrona Watch Company",
+    "Website": "https://www.karlskronawatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Nezumi Studios",
+    "Website": "https://www.nezumistudios.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Sweden",
+    "Brand": "Nordberg Watches",
+    "Website": "https://www.nordbergwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Aera Instruments",
+    "Website": "https://aera.co/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Airain Watches",
+    "Website": "https://www.airain.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Armand Nicolet",
+    "Website": "https://www.armandnicolet.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Awake Watches",
+    "Website": "https://awakewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Benrus Watches",
+    "Website": "https://benrus.com/en-ch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Bourlinger Watches",
+    "Website": "https://www.bourlinger.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Cuervo Y Sobrinos Watches",
+    "Website": "https://www.cuervoysobrinos.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Direnzo Watches",
+    "Website": "https://direnzowatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Elka Watch Co",
+    "Website": "https://www.elkawatch.ch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Formex Watches",
+    "Website": "https://formexwatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Gorilla Watches",
+    "Website": "https://gorilla-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Jacques Do Manoir Watches",
+    "Website": "https://www.jacquesdumanoir.ch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Laventure Watches",
+    "Website": "https://laventurewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Liv Watches",
+    "Website": "https://www.livwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "MB&F",
+    "Website": "https://www.mbandf.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Milus Watch Co",
+    "Website": "https://milus.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Ming Watches",
+    "Website": "https://www.ming.watch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Nivada Grenchen",
+    "Website": "https://nivadagrenchenofficial.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Norqain Watches",
+    "Website": "https://norqain.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Olech & Wajs Watches",
+    "Website": "https://ow-watch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Parmigiani Fleuirier Watches",
+    "Website": "https://www.parmigiani.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Pilo & Co",
+    "Website": "https://pilo-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Signum Watches",
+    "Website": "https://www.signumwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Snglrty Watch",
+    "Website": "https://www.snglrtywatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Squale Watches",
+    "Website": "https://www.squale.ch/en/home"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Swiss Watch Company",
+    "Website": "https://swcusa.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Vulcain Watches",
+    "Website": "https://vulcain.ch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Wicked Watch Co",
+    "Website": "https://www.wickedwatch.ch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Zodiac Watches",
+    "Website": "https://www.zodiacwatches.com/en-us/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Furlan Marri Watches",
+    "Website": "https://furlanmarri.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Brellum",
+    "Website": "https://www.brellum.swiss/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Concentric Watches",
+    "Website": "https://concentric-watch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Dennison",
+    "Website": "https://dennisonwatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Dietrich",
+    "Website": "https://dietrich.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Done",
+    "Website": "https://www.donewatches.ch/en/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "double VE",
+    "Website": "https://double-ve.ch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Dwiss",
+    "Website": "https://www.dwiss.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Helfer",
+    "Website": "https://www.helferwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "ID Genève",
+    "Website": "https://www.idwatch.ch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Kazimon",
+    "Website": "https://kazimon.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Laine Watches",
+    "Website": "https://www.lainewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Matterhorn Watch Co.",
+    "Website": "https://www.matterhornwatchco.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Milléchron / Atelier Millésime",
+    "Website": "https://millechron.ch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "MoVas",
+    "Website": "https://movaswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Ochs und Junior",
+    "Website": "https://www.ochsundjunior.swiss/watches/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Ollech & Wajs",
+    "Website": "https://ow-watch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Relio",
+    "Website": "https://reliowatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Switzerland",
+    "Brand": "Trematic",
+    "Website": "https://trematicwatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "96Zero Watches",
+    "Website": "https://96zero.co.uk/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Alpharo Watches",
+    "Website": "https://alpharo.co.uk/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Alkin Watches",
+    "Website": "https://alkinwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "anOrdain Watches",
+    "Website": "https://anordain.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Apiar Watches",
+    "Website": "https://www.apiar.co.uk/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Arken Watch Co",
+    "Website": "https://arken.uk/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Beaucroft Watches",
+    "Website": "https://beaucroftwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Bremont Watch Co",
+    "Website": "https://www.bremont.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Christopher Ward",
+    "Website": "https://www.christopherward.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Clemence Watches",
+    "Website": "https://www.clemencewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Detrash Watches",
+    "Website": "https://detrash.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Ember Watch Co",
+    "Website": "https://www.emberwatchcompany.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Emerson Scott Watches",
+    "Website": "https://www.emertonscott.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Farer Watches",
+    "Website": "https://farer.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Fears Watch Company",
+    "Website": "https://www.fearswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Golby Watches",
+    "Website": "https://www.golbywatches.co.uk/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Marloe Watch Co",
+    "Website": "https://www.marloewatchcompany.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Maystone Watch Co",
+    "Website": "https://www.maystonewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Mc Quaide Watches",
+    "Website": "https://mcquaide.co.uk/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Monro Adventure Watches",
+    "Website": "https://monroadventure.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Mr Jones Watches",
+    "Website": "https://mrjoneswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Newmark Watch Co",
+    "Website": "https://newmarkwatchcompany.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Nite Watches",
+    "Website": "https://www.nitewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Ontic Watches",
+    "Website": "https://onticwatches.com/password"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Riley Watch Co",
+    "Website": "https://www.rileywatchco.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Satori Watches",
+    "Website": "https://www.satoriwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Studio Underd0g",
+    "Website": "https://underd0g.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Swan and Edgar Watches",
+    "Website": "https://swanandedgar.com/en-ie"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Bamford of London",
+    "Website": "https://bamfordlondon.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Cestrian",
+    "Website": "https://cestrianwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Cooper Watches",
+    "Website": "https://www.cooperwatches.co.uk/home-1/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Drayton Watches",
+    "Website": "https://draytonwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Duckworth Prestex",
+    "Website": "https://duckworthprestex.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Edward Christopher",
+    "Website": "https://edwardchristopher.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Elliot Brown",
+    "Website": "https://elliotbrownwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Firle Watches",
+    "Website": "https://firlewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Geckota",
+    "Website": "https://www.geckota.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Helicon",
+    "Website": "https://heliconwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Isotope",
+    "Website": "https://isotopewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "K. Grün & Söhne",
+    "Website": "https://www.grunandsohne.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Loresum",
+    "Website": "https://loresum.watch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Marlin UK",
+    "Website": "https://www.marlinwatch.co.uk/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Mater Made",
+    "Website": "https://matermade.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "McQuaide",
+    "Website": "https://mcquaide.co.uk/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "NFW",
+    "Website": "https://nfwonline.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Nine Four Watches",
+    "Website": "https://www.ninefourwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "No-Watch Company",
+    "Website": "https://nowatch.com/shop"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Noctua Watch Corp.",
+    "Website": "https://noctuawatchcorp.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Nomadic",
+    "Website": "https://nomadicwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Nordic Marine",
+    "Website": "https://nordicmarineinstruments.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Northgate",
+    "Website": "https://www.northgatewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Objest",
+    "Website": "http://objest.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Octon",
+    "Website": "https://octonwatches.co.uk/home/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Oligo",
+    "Website": "https://oligowatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Olto-8",
+    "Website": "https://olto-8.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Paul Bowman",
+    "Website": "https://www.bowmanlondon.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Perpetual Watch Company",
+    "Website": "https://www.perpetual-watch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Pinion",
+    "Website": "https://www.pinionwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Praetorian",
+    "Website": "https://www.milwatches.com/en/PRAETORIAN-Watches/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Precista",
+    "Website": "https://www.timefactors.com/collections/precista"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Quasar",
+    "Website": "https://quasarwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Radcliffe Watches",
+    "Website": "https://www.radcliffewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Redux",
+    "Website": "https://reduxwatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Regia",
+    "Website": "https://regia-timepieces.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Reverie",
+    "Website": "https://www.reveriewatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Riskers",
+    "Website": "https://riskers-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Roebuck Watch Company",
+    "Website": "https://www.roebuckwatchco.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Roue",
+    "Website": "https://rouewatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "RVLVR",
+    "Website": "https://rvlvr.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Sablier",
+    "Website": "https://www.sablierwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Schofield",
+    "Website": "https://schofieldwatchcompany.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Sconvolto",
+    "Website": "https://www.sconvolto.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Scurfa",
+    "Website": "https://www.scurfawatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Seaborne",
+    "Website": "https://seabornewatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Selten",
+    "Website": "https://seltenwatch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Sidereus Watches",
+    "Website": "https://sidereus.com/sidereus/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Smith Bradley",
+    "Website": "https://smithandbradley.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Smiths",
+    "Website": "https://www.smithswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Stella Watches",
+    "Website": "https://stellawatchcompany.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Stirling",
+    "Website": "https://stirlingtimepieces.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Stranger Watch Co.",
+    "Website": "https://strangertime.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Strond",
+    "Website": "https://www.stronduk.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Subdelta",
+    "Website": "https://subdelta.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Svalbard",
+    "Website": "https://svalbard.watch/index.html"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Tessé Watches",
+    "Website": "https://tesse-watches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Theorema",
+    "Website": "https://theoremawatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Timefactors",
+    "Website": "https://www.timefactors.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Tuul",
+    "Website": "https://tuulwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Typsim",
+    "Website": "https://www.typsim.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Ubiq",
+    "Website": "https://ubiqwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Ugly Watch Co",
+    "Website": "https://uglywatchco.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "UTC",
+    "Website": "https://utc-watch.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Ventus Watches",
+    "Website": "https://ventuswatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Vertigo",
+    "Website": "https://www.vertigowatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Wayforth",
+    "Website": "https://wayforthwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Wessex Watches",
+    "Website": "https://www.wessexwatches.co.uk/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Wilk WatchWorks",
+    "Website": "https://www.wilkwatchworks.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "William Wood",
+    "Website": "https://williamwoodwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Zenton",
+    "Website": "https://www.zentonwatches.com/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "United Kingdom",
+    "Brand": "Zero West",
+    "Website": "https://zerowest.watch/"
+  },
+  {
+    "Continent": "Europe",
+    "Country": "Wales",
+    "Brand": "Oriorwaith J. Sarnowski",
+    "Website": "https://sarnowski.cymru/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Branch Horology",
+    "Website": "https://branchhorology.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Bahrami Watches",
+    "Website": "https://bahramiwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Fleux Watches",
+    "Website": "https://www.fleuxwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Halios Watches",
+    "Website": "https://halioswatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Heron Watch Co",
+    "Website": "https://www.heronwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Makoto Watches",
+    "Website": "https://makotowatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Marathon Watches",
+    "Website": "https://www.marathonwatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Momemtum Watches",
+    "Website": "https://momentumwatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Redwood Watches",
+    "Website": "https://www.redwoodwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Slow Watches",
+    "Website": "https://uk.slow-watches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Whitby Watch Co.",
+    "Website": "https://whitbywatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Canister Watches",
+    "Website": "https://canisterwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Ferro & Company",
+    "Website": "https://www.ferrowatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Helgray",
+    "Website": "https://www.helgray.com/collections/watches"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Héron",
+    "Website": "https://www.heronwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Locke & King",
+    "Website": "https://lockeandking.ca/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Locke & King",
+    "Website": "https://lockeandking.ca/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Makara Watches",
+    "Website": "https://www.makarawatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Maker Watch Company",
+    "Website": "https://www.makerwatchcompany.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Shelby Watch Company",
+    "Website": "https://shelbywatchco.ca/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Tactico",
+    "Website": "https://tacticowatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Vanbanner",
+    "Website": "https://vanbannerwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "Vancouver Watch Co",
+    "Website": "https://vancouverwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "Canada",
+    "Brand": "York & Front Watch Co.",
+    "Website": "https://yorkfront.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "5280 Watch Company",
+    "Website": "https://www.5280watchcompany.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Albany Watches",
+    "Website": "https://albanywatches.com/blog/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Alexander James Watches",
+    "Website": "https://alexanderjameswatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Ardio Watches",
+    "Website": "https://ardiowatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Arethusa Watch Co",
+    "Website": "https://www.arethusawatch.com/about"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Astor+Banks Watches",
+    "Website": "https://astorandbanks.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Autodromo",
+    "Website": "https://autodromo.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Averitas",
+    "Website": "https://averitas.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Avian Watches",
+    "Website": "https://avianwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "BYOP Watches",
+    "Website": "https://www.byopwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Canopy Watch Company",
+    "Website": "https://www.canopywatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Centric Instruments",
+    "Website": "https://www.centricinstruments.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Colorado Wath Company",
+    "Website": "https://coloradowatchcompany.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Detroit Watch Co",
+    "Website": "https://detroitwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Dryden Watch Company",
+    "Website": "https://drydenwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Dufrane Watches",
+    "Website": "https://www.dufranewatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Eone Watches",
+    "Website": "https://www.eone-time.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Farr + Switt Watches",
+    "Website": "https://www.farrandswit.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Filip and Co Watches",
+    "Website": "https://www.filipandcowatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Ginault Watches",
+    "Website": "https://ginault.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Cincinnati Watch Company",
+    "Website": "https://cincinnatiwatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Grandeur Watches",
+    "Website": "https://grandeur-usa.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Haim Watch Company",
+    "Website": "https://haimwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Heitis Watch Company",
+    "Website": "https://heitiswatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Hemel Watches",
+    "Website": "https://www.hemelwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Hoffman Watches",
+    "Website": "https://hoffmanwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Iconic Watch Company",
+    "Website": "https://iconicwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Islander Dive Watches",
+    "Website": "https://longislandwatch.com/islander-watches/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Jack Mason Watches",
+    "Website": "https://jackmasonbrand.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Jorg Gray Watches",
+    "Website": "https://jorggray.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Lorier Watches",
+    "Website": "https://www.lorierwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Lum-Tec Watches",
+    "Website": "https://lum-tec.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Mark Time Watches",
+    "Website": "https://marktimewatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Matthew Mercury Watches",
+    "Website": "https://matthew-mercury.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Mercer Watch Co",
+    "Website": "https://mercerwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Minim Watches",
+    "Website": "https://minim-watches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "MkII Watches",
+    "Website": "https://mkiiwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Monta Watch",
+    "Website": "https://montawatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Moterey Watch Co",
+    "Website": "https://montereywatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Nodus Watches",
+    "Website": "https://www.noduswatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Northern Star Watches",
+    "Website": "https://www.northernstarwatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Oak & Oscar Watches",
+    "Website": "https://oakandoscar.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Ocean Crawler Watch Co",
+    "Website": "https://www.oceancrawler.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Orion Watches",
+    "Website": "https://orionwatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Pelton Watch Company",
+    "Website": "https://peltonwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Raven Watches",
+    "Website": "https://ravenwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "RGM Watches",
+    "Website": "https://www.rgmwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Sangin Instruments",
+    "Website": "https://sangininstruments.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Seals Watch Company",
+    "Website": "https://sealswatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Sel Instrument",
+    "Website": "https://selinstrument.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Sheffield Watches",
+    "Website": "https://sheffieldwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Shinloa Watches",
+    "Website": "https://www.shinola.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Tool Watch Co",
+    "Website": "https://toolwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Towson Watch Company",
+    "Website": "https://www.towsonwatchcompany.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Trafford Watch Co",
+    "Website": "https://www.traffordwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Traska Watches",
+    "Website": "https://www.traskawatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Tsao Baltimore Watches",
+    "Website": "https://tsaobaltimore.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Varius Watches",
+    "Website": "https://www.variuswatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Vear Watches",
+    "Website": "https://www.vaerwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Vero Watch Company",
+    "Website": "https://vero-watch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Visitor Watch Co",
+    "Website": "https://www.visitorwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Waldan Watches",
+    "Website": "https://waldanwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Weiss Watch Company",
+    "Website": "https://weisswatchcompany.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Xeric Watches",
+    "Website": "https://www.xeric.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Bernhardt",
+    "Website": "https://www.bernhardtwatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Bertucci",
+    "Website": "https://bertucciwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Bespoke Watch Projects",
+    "Website": "https://www.bespokewatchprojects.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Blacklist",
+    "Website": "https://www.blacklistwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Blanchard",
+    "Website": "https://blanchardwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Bob Wellson",
+    "Website": "https://www.bobwellson.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Boschett",
+    "Website": "https://www.boschett-timepieces.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Bremoir",
+    "Website": "https://www.bremoir.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Brew Watch Co.",
+    "Website": "https://www.brew-watches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Camp Watches",
+    "Website": "https://campwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Carpenter Watches",
+    "Website": "https://carpenterwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Castle & Gazelle",
+    "Website": "https://castleandgazelle.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Dan Henry",
+    "Website": "https://danhenrywatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Decima",
+    "Website": "https://decima-watches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Deep Blue (legacy mirco)",
+    "Website": "https://www.deepbluewatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "DeMarco Watch Co.",
+    "Website": "https://www.demarcowatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Diatom Watches",
+    "Website": "https://www.diatomwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Dificiano",
+    "Website": "https://www.dificianowatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "EDC Hardwear",
+    "Website": "https://www.edchardwear.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Egard",
+    "Website": "https://www.egardwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "EMG Watches",
+    "Website": "https://emgwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Ergon",
+    "Website": "https://ergonwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Esoteric Watches",
+    "Website": "https://esotericwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Fleddermann von Rieste",
+    "Website": "https://vonrieste.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Foliot",
+    "Website": "https://www.foliotwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "GhostTown",
+    "Website": "https://ghosttownwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Greg Stevens Design",
+    "Website": "https://www.gregstevensdesign.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Hager",
+    "Website": "https://www.hagerwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Helm",
+    "Website": "https://helmwatches.com/index.html"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Hesili",
+    "Website": "https://hesiliny.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Imperial Watch Co.",
+    "Website": "https://imperialwatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "J.Ciro",
+    "Website": "https://www.jcirowatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Kobold Watches",
+    "Website": "https://koboldwatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Korsbek",
+    "Website": "http://korsbek.com/index.php"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "LaMotte",
+    "Website": "https://www.lamottewatchco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Lesablier",
+    "Website": "https://www.lesablierwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Marin Instruments",
+    "Website": "https://www.marininstruments.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Martenero",
+    "Website": "https://martenero.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Minuteman",
+    "Website": "https://minutemanwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "MK II (legacy micro)",
+    "Website": "https://mkiiwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "MKll",
+    "Website": "https://mkiiwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Outcast Watch",
+    "Website": "https://www.outcastwatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Prevail",
+    "Website": "https://prevailwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Rebel Time",
+    "Website": "https://rebelbrooklyn.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Resco",
+    "Website": "https://rescoinstruments.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Revolution Watch Company",
+    "Website": "https://shop.revolutionwatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "RPaige",
+    "Website": "https://www.rpaigewatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Sangamon",
+    "Website": "https://sangamonwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "The Abingdon Co.",
+    "Website": "https://abingdonco.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Tornek-Rayville (legacy micro)",
+    "Website": "https://tornek-rayville.us/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "True North Watch Company",
+    "Website": "https://www.truenorthcollections.com/the-watches"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Vaer Watches (legacy micro)",
+    "Website": "https://www.vaerwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Vortic",
+    "Website": "https://vorticwatches.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Winfield Watch Company",
+    "Website": "https://winfieldwatch.com/"
+  },
+  {
+    "Continent": "North America",
+    "Country": "United States",
+    "Brand": "Wrist Hardware",
+    "Website": "https://wristhardware.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "Australia",
+    "Brand": "Erebus Watches",
+    "Website": "https://erebuswatches.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "Australia",
+    "Brand": "Galvin Watch Com",
+    "Website": "https://galvinwatchcompany.com.au/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "Australia",
+    "Brand": "Hz Watches",
+    "Website": "https://hzwatches.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "Australia",
+    "Brand": "Melbourne Watch Company",
+    "Website": "https://www.melbournewatch.com.au/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "Australia",
+    "Brand": "Second Hour Watches",
+    "Website": "https://www.secondhour.com.au/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "Australia",
+    "Brand": "Bausele",
+    "Website": "https://www.bausele.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "Australia",
+    "Brand": "Erroyl",
+    "Website": "https://www.erroyl.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "Australia",
+    "Brand": "Haigh & Hastings",
+    "Website": "https://www.haighandhastings.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "Australia",
+    "Brand": "Houtman",
+    "Website": "https://houtmanwatch.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "Australia",
+    "Brand": "Huizen Watches",
+    "Website": "https://huizenwatches.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "New Zealand",
+    "Brand": "Draken Watches",
+    "Website": "https://www.drakenwatches.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "New Zealand",
+    "Brand": "Margette and Belmoto",
+    "Website": "https://magrette.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "New Zealand",
+    "Brand": "Beaufort",
+    "Website": "https://www.beaufort-watches.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "New Zealand",
+    "Brand": "Magrette",
+    "Website": "https://magrette.com/"
+  },
+  {
+    "Continent": "Oceania",
+    "Country": "New Zealand",
+    "Brand": "Zealandic",
+    "Website": "https://www.zealandic.co.nz/"
+  },
+  {
+    "Continent": "South America",
+    "Country": "Brazil",
+    "Brand": "Terranova Watches",
+    "Website": "https://terranovawatches.com/en/"
+  },
+  {
+    "Continent": "South America",
+    "Country": "Chile",
+    "Brand": "Castor Watches",
+    "Website": "https://castor-watches.com/"
+  },
+  {
+    "Continent": "TBC",
+    "Country": "TBC",
+    "Brand": "Kuruvakka",
+    "Website": "https://kuruvakka.com/"
+  },
+  {
+    "Continent": "TBC",
+    "Country": "TBC",
+    "Brand": "Lachlann",
+    "Website": "https://www.lachlanknox.com.au/"
+  }
+];  
+    
     let sortKey = 'Continent';
     let sortDir = 1; // 1 asc, -1 desc
 
